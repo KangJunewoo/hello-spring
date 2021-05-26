@@ -1,6 +1,7 @@
 package com.medium.junewookang.hellospring.repository;
 
 import com.medium.junewookang.hellospring.domain.Member;
+import org.springframework.stereotype.Repository;
 
 import java.util.List;
 import java.util.Optional;

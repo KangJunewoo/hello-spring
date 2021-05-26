@@ -1,8 +1,10 @@
 package com.medium.junewookang.hellospring.repository;
 
 import com.medium.junewookang.hellospring.domain.Member;
+import org.springframework.stereotype.Repository;
 
 import java.util.*;
+
 
 public class MemoryMemberRepository implements MemberRepository{ // 리포지토리는 넣었다 뺐다 개발스럽게 함.
 
