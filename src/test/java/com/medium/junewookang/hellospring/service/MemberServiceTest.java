@@ -4,6 +4,7 @@ import com.medium.junewookang.hellospring.domain.Member;
 import com.medium.junewookang.hellospring.repository.MemoryMemberRepository;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import java.util.Optional;
@@ -13,9 +14,16 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class MemberServiceTest {
 
-    MemberService memberService = new MemberService();
-    MemoryMemberRepository memberRepository = new MemoryMemberRepository(); // 리포지토리 테스트에서 쓰는거랑 같은건데.. 같은 객체로 통일하면 안되나?
+    MemberService memberService;
+    MemoryMemberRepository memberRepository; // 리포지토리 테스트했을때와 같은 객체로 통일. (생성자 쓰지 않음)
     // ctrl r 을 누르면 이전에 실행했던거 그대로 실행해줌.
+
+    @BeforeEach
+    public void beforeEach(){ // 두개 생성되는건 알겠고..
+        memberRepository = new MemoryMemberRepository();
+        memberService = new MemberService(memberRepository);
+    }
+    // 멤버서비스 입장에선 그때그때 리포지토리를 만들어서 넣지 않고,
 
     @AfterEach
     public void afterEach(){

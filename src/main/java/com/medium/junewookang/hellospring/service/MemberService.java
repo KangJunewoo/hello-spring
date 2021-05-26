@@ -10,7 +10,11 @@ import java.util.Optional;
 public class MemberService { // 서비스는 좀 더 비즈니스에 가까움.
     // cmd shift t로 바~로 테스트 생성
     // 테스트는 잘되는경우보다 예외상황이 훨~~~ 씬 중요함!
-    private final MemberRepository memberRepository = new MemoryMemberRepository();
+    private final MemberRepository memberRepository;
+
+    public MemberService(MemberRepository memberRepository) {
+        this.memberRepository = memberRepository;
+    }
 
     /**
      * 회원 가입
