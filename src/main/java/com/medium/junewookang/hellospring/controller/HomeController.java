@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
 public class HomeController {
-    @GetMapping("/") // 이런 식으로 / 있으면 static에 있는거 무시됨.
+    @GetMapping("/") // 우선순위는 컨트롤러 > static
     public String home(){
         return "home";
     }

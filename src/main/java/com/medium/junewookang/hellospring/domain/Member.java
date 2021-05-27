@@ -1,5 +1,6 @@
 package com.medium.junewookang.hellospring.domain;
 
+// 우리가 실제로 다루는 멤버.
 public class Member {
     private Long id;
     private String name;
