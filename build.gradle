@@ -21,6 +21,8 @@ dependencies { // maven-central이라는 사이트에서 이 의존성들을 다
 	testImplementation('org.springframework.boot:spring-boot-starter-test') {
 		exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
 	}
+	implementation 'org.springframework.boot:spring-boot-starter-jdbc'
+	runtimeOnly 'com.h2database:h2'
 }
 
 test {
