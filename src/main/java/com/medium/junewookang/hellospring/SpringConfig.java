@@ -1,7 +1,7 @@
 package com.medium.junewookang.hellospring;
 
 
-import com.medium.junewookang.hellospring.repository.JdbcMemberRepository;
+import com.medium.junewookang.hellospring.repository.JdbcTemplateMemberRepository;
 import com.medium.junewookang.hellospring.repository.MemberRepository;
 import com.medium.junewookang.hellospring.service.MemberService;
 import org.springframework.context.annotation.Bean;
@@ -29,7 +29,7 @@ public class SpringConfig {
     @Bean
     public MemberRepository memberRepository(){
 //        return new MemoryMemberRepository();
-        return new JdbcMemberRepository(dataSource);
-
+//        return new JdbcMemberRepository(dataSource);
+        return new JdbcTemplateMemberRepository(dataSource);
     }
 }
