@@ -2,10 +2,12 @@ package com.medium.junewookang.hellospring.service;
 
 import com.medium.junewookang.hellospring.domain.Member;
 import com.medium.junewookang.hellospring.repository.MemberRepository;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 import java.util.Optional;
 
+@Transactional
 public class MemberService { // 서비스는 좀 더 비즈니스에 가까움.
     private final MemberRepository memberRepository;
 
